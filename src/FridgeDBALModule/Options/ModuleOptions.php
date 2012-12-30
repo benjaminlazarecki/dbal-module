@@ -48,10 +48,6 @@ class ModuleOptions extends AbstractOptions
      */
     public function getDefaultConnection()
     {
-        if ($this->defaultConnection === null) {
-            $this->defaultConnection = 'default';
-        }
-
         return $this->defaultConnection;
     }
 
