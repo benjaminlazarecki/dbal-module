@@ -13,6 +13,7 @@ namespace FridgeDBALModule\Service;
 
 use Fridge\DBAL\Connection\ConnectionInterface,
     Fridge\DBAL\ConnectionFactory as DBALFactory,
+    Fridge\DBAL\Event\Subscriber\SetCharsetSubscriber,
     FridgeDBALModule\Options\ConnectionMappedTypesOptions,
     FridgeDBALModule\Options\ConnectionParametersOptions;
 
@@ -40,6 +41,10 @@ class ConnectionFactory
 
         if ($mappedTypesOptions !== null) {
             $this->setMappedTypes($connection, $mappedTypesOptions);
+        }
+
+        if ($parametersOptions->getCharset() !== null) {
+            $this->registerSetCharsetSubscriber($parametersOptions->getCharset(), $connection);
         }
 
         return $connection;
@@ -75,5 +80,18 @@ class ConnectionFactory
                 $connection->getPlatform()->addMandatoryType($mandatoryType);
             }
         }
+    }
+
+    /**
+     * Registers a set charset subsriber on a connection.
+     *
+     * @param string                                      $charset    The charset.
+     * @param \Fridge\DBAL\Connection\ConnectionInterface $connection The connection.
+     */
+    protected function registerSetCharsetSubscriber($charset, ConnectionInterface $connection)
+    {
+        $setCharsetSubscriber = new SetCharsetSubscriber($charset);
+
+        $connection->getConfiguration()->getEventDispatcher()->addSubscriber($setCharsetSubscriber);
     }
 }
