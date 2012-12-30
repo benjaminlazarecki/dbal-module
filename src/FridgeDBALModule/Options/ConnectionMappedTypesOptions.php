@@ -31,6 +31,17 @@ class ConnectionMappedTypesOptions extends AbstractOptions
     protected $mandatories;
 
     /**
+     * {@inheritdoc}
+     */
+    public function __construct($options = null)
+    {
+        $this->customs = array();
+        $this->mandatories = array();
+
+        parent::__construct($options);
+    }
+
+    /**
      * Gets the strict mapped type flag.
      *
      * @return boolean The strict mapped type flag.

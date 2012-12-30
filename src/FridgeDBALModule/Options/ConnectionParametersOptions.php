@@ -52,6 +52,16 @@ class ConnectionParametersOptions extends AbstractOptions
     protected $driverOptions;
 
     /**
+     * {@inheritdoc}
+     */
+    public function __construct($options = null)
+    {
+        $this->driverOptions = array();
+
+        parent::__construct($options);
+    }
+
+    /**
      * Gets the connection class parameter.
      *
      * @return string The connection class parameter.
