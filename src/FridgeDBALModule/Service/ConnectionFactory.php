@@ -11,7 +11,7 @@
 
 namespace FridgeDBALModule\Service;
 
-use Fridge\DBAL\Adapter\ConnectionInterface,
+use Fridge\DBAL\Connection\ConnectionInterface,
     Fridge\DBAL\ConnectionFactory as DBALFactory,
     FridgeDBALModule\Options\ConnectionMappedTypesOptions,
     FridgeDBALModule\Options\ConnectionParametersOptions;
