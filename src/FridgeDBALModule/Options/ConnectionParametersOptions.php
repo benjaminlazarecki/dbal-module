@@ -276,7 +276,7 @@ class ConnectionParametersOptions extends AbstractOptions
      *
      * @param array $driverOptions The connection driver options parameter.
      */
-    public function setDriverOptions($driverOptions)
+    public function setDriverOptions(array $driverOptions)
     {
         $this->driverOptions = $driverOptions;
     }
