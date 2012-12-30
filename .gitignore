@@ -1,0 +1,5 @@
+# Composer
+/installer
+/composer.phar
+/composer.lock
+/vendor
