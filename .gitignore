@@ -3,3 +3,7 @@
 /composer.phar
 /composer.lock
 /vendor
+
+# PHPUnit
+/phpunit.xml
+/report

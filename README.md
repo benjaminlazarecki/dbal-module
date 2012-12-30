@@ -1,5 +1,7 @@
 # README
 
+[![Build Status](https://secure.travis-ci.org/fridge-project/dbal-module.png?branch=master)](http://travis-ci.org/fridge-project/dbal-module)
+
 ## Documentation
 
  1. [Installation](https://github.com/fridge-project/dbal-module/blob/master/doc/installation.md)
@@ -8,7 +10,8 @@
 
 ## Testing
 
-The module is not tested yet (Shame on me...). Anyway, it will be soon :)
+The module is fully unit tested by [PHPUnit](http://www.phpunit.de/) with a code coverage close to **100%**. To execute
+the test suite, check the travis [configuration](https://github.com/fridge-project/dbal-module/blob/master/.travis.yml).
 
 ## Contribution
 
