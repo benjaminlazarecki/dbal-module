@@ -23,7 +23,7 @@ use Fridge\DBAL\Type\Type,
  */
 class ConnectionRegistry implements FactoryInterface
 {
-    /** @var \Fridge\DBALModule\Service\ConnectionFactory */
+    /** @var \FridgeDBALModule\Service\ConnectionFactory */
     protected $factory;
 
     /** @var \FridgeDBALModule\Options\ModuleOptions */

@@ -18,16 +18,16 @@ namespace FridgeDBALModule\Options;
  */
 class ConnectionOptions extends AbstractOptions
 {
-    /** @var \Fridge\DBALModule\Options\ConnectionParametersOptions */
+    /** @var \FridgeDBALModule\Options\ConnectionParametersOptions */
     protected $parameters;
 
-    /** @var \Fridge\DBALModule\Options\ConnectionMappedTypesOptions */
+    /** @var \FridgeDBALModule\Options\ConnectionMappedTypesOptions */
     protected $mappedTypes;
 
     /**
      * Gets the connection parameters configuration.
      *
-     * @return \Fridge\DBALModule\Options\ConnectionParametersOptions The connection parameters options.
+     * @return \FridgeDBALModule\Options\ConnectionParametersOptions The connection parameters options.
      */
     public function getParameters()
     {
@@ -47,7 +47,7 @@ class ConnectionOptions extends AbstractOptions
     /**
      * Gets the connection mapped types options.
      *
-     * @return \Fridge\DBALModule\Options\ConnectionMappedTypesOptions The connection mapped types options.
+     * @return \FridgeDBALModule\Options\ConnectionMappedTypesOptions The connection mapped types options.
      */
     public function getMappedTypes()
     {

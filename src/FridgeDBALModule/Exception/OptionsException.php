@@ -23,7 +23,7 @@ class OptionsException extends Exception
      *
      * @param string $connection The connection name.
      *
-     * @return \Fridge\DBALModule\Exception\OptionsException The "CONNECTION DOES NOT EXIST" exception.
+     * @return \FridgeDBALModule\Exception\OptionsException The "CONNECTION DOES NOT EXIST" exception.
      */
     static public function connectionDoesNotExist($connection)
     {
@@ -35,7 +35,7 @@ class OptionsException extends Exception
      *
      * @param string $connection The option name.
      *
-     * @return \Fridge\DBALModule\Exception\OptionsException The "OPTION DOES NOT EXIST" exception.
+     * @return \FridgeDBALModule\Exception\OptionsException The "OPTION DOES NOT EXIST" exception.
      */
     static public function optionDoesNotExist($option)
     {

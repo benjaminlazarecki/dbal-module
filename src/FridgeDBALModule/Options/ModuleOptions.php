@@ -92,9 +92,9 @@ class ModuleOptions extends AbstractOptions
      *
      * @param string $name The connection name.
      *
-     * @throws \Fridge\DBALModule\Exception\OptionsException If the connection does not exist.
+     * @throws \FridgeDBALModule\Exception\OptionsException If the connection does not exist.
      *
-     * @return \Fridge\DBALModule\Options\ConnectionOptions The connection options.
+     * @return \FridgeDBALModule\Options\ConnectionOptions The connection options.
      */
     public function getConnection($name)
     {

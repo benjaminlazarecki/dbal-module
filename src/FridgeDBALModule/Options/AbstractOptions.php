@@ -26,6 +26,8 @@ abstract class AbstractOptions extends BaseOptions
 {
     /**
      * {@inheritdoc}
+     *
+     * @throws \FridgeDBALModule\Exception\OptionsException If the option does not exist.
      */
     public function __set($key, $value)
     {
