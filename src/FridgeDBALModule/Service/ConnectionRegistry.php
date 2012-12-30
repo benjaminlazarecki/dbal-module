@@ -80,6 +80,10 @@ class ConnectionRegistry implements FactoryInterface
      */
     public function getConnections()
     {
+        foreach (array_keys($this->options->getConnections()) as $name) {
+            $this->getConnection($name);
+        }
+
         return $this->connections;
     }
 
