@@ -223,4 +223,26 @@ class ModuleTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('enum', $connection->getPlatform()->getMappedType('enum'));
         $this->assertTrue($connection->getPlatform()->hasMandatoryType('enum'));
     }
+
+    public function testSkeleton()
+    {
+        $this->applicationConfiguration['module_listener_options']['config_glob_paths'] = array(
+            __DIR__.'/../Fixtures/config/skeleton/fridge_dbal.global.php',
+            __DIR__.'/../Fixtures/config/skeleton/fridge_dbal.local.php',
+        );
+
+        $this->application = Application::init($this->applicationConfiguration);
+
+        $connection = $this->application
+            ->getServiceManager()
+            ->get('fridge.dbal')
+            ->getConnection('default');
+
+        $this->assertInstanceOf('Fridge\DBAL\Driver\PDO\MySQLDriver', $connection->getDriver());
+        $this->assertSame('username', $connection->getUsername());
+        $this->assertSame('password', $connection->getPassword());
+        $this->assertSame('database', $connection->getDatabase());
+        $this->assertSame('127.0.0.1', $connection->getHost());
+        $this->assertSame(3306, $connection->getPort());
+    }
 }
