@@ -244,5 +244,6 @@ class ModuleTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('database', $connection->getDatabase());
         $this->assertSame('127.0.0.1', $connection->getHost());
         $this->assertSame(3306, $connection->getPort());
+        $this->assertTrue($connection->getConfiguration()->getEventDispatcher()->hasListeners(Events::POST_CONNECT));
     }
 }
