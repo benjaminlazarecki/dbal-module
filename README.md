@@ -2,6 +2,9 @@
 
 [![Build Status](https://secure.travis-ci.org/fridge-project/dbal-module.png?branch=master)](http://travis-ci.org/fridge-project/dbal-module)
 
+The module eases the [Fridge DBAL](http://fridge-project.org/dbal) integration. It allows you to define your own
+connections via the configuration file, access them through the service manager & much more...
+
 ## Documentation
 
  1. [Installation](https://github.com/fridge-project/dbal-module/blob/master/doc/installation.md)
