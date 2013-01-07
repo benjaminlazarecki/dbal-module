@@ -51,10 +51,6 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface, Se
      */
     public function getServiceConfig()
     {
-        return array(
-            'factories' => array(
-                'fridge.dbal' => 'FridgeDBALModule\Service\ConnectionRegistry',
-            ),
-        );
+        return include __DIR__.'/../../config/services.config.php';
     }
 }
