@@ -13,7 +13,10 @@ order to be loaded (see the `application.config.php` file). The most important p
 **sensitive** datas like username or password in the `*.local.php` files. Then, only safe datas will be versionned &
 password will be kept private :)
 
-The module provides a [configuration skeleton](https://github.com/fridge-project/dbal-module/tree/master/tests/FridgeDBALModule/Fixtures/config/skeleton)
+If you would like more informations, you can read this [section](http://framework.zend.com/manual/2.0/en/modules/zend.mvc.services.html#default-configuration-options)
+of the official zf2 documentation.
+
+To help you, the module provides a [configuration skeleton](https://github.com/fridge-project/dbal-module/tree/master/tests/FridgeDBALModule/Fixtures/config/skeleton)
 which can be used as starting point for your project.
 
 ## Simple Connection
