@@ -1,5 +1,19 @@
 # Usage
 
+## Command
+
+The module provides commands which ease common tasks:
+
+* `fridge database create`: Creates a database.
+* `fridge database drop`: Drops a database.
+* `fridge database drop_and_create`: Drops & creates a database (if the database does not exist,
+the command will only create it).
+
+Each command uses by default the configured default_connection.
+If you want to use an other one, you can also specify the connection name as argument:
+
+`php public/index.php fridge database create --connection=name`
+
 ## Services
 
 The module as been designed around the service `fridge.dbal` which is a connection registry
@@ -8,7 +22,7 @@ The module as been designed around the service `fridge.dbal` which is a connecti
 To get it, simply call the service manager:
 
 ``` php
-$connectonRegistry = $serviceManager->get('fridge.dbal');
+$connectionRegistry = $serviceManager->get('fridge.dbal');
 ```
 
 The connection registry is configured according to your configuration, so, we will take this one as reference:

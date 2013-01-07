@@ -43,7 +43,10 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface, Se
      */
     public function getConfig()
     {
-        return include __DIR__.'/../../config/module.config.php';
+        $moduleConfig = include __DIR__.'/../../config/module.config.php';
+        $consoleConfig = include __DIR__.'/../../config/console.config.php';
+
+        return array_merge($moduleConfig, $consoleConfig);
     }
 
     /**
