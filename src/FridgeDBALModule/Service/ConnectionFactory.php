@@ -11,11 +11,11 @@
 
 namespace FridgeDBALModule\Service;
 
-use Fridge\DBAL\Connection\ConnectionInterface,
-    Fridge\DBAL\ConnectionFactory as DBALFactory,
-    Fridge\DBAL\Event\Subscriber\SetCharsetSubscriber,
-    FridgeDBALModule\Options\ConnectionMappedTypesOptions,
-    FridgeDBALModule\Options\ConnectionParametersOptions;
+use Fridge\DBAL\Connection\ConnectionInterface;
+use Fridge\DBAL\ConnectionFactory as DBALFactory;
+use Fridge\DBAL\Event\Subscriber\SetCharsetSubscriber;
+use FridgeDBALModule\Options\ConnectionMappedTypesOptions;
+use FridgeDBALModule\Options\ConnectionParametersOptions;
 
 /**
  * Connection factory.
@@ -35,8 +35,7 @@ class ConnectionFactory
     public function create(
         ConnectionParametersOptions $parametersOptions,
         ConnectionMappedTypesOptions $mappedTypesOptions = null
-    )
-    {
+    ) {
         $connection = DBALFactory::create($parametersOptions->toArray());
 
         if ($mappedTypesOptions !== null) {
@@ -59,8 +58,7 @@ class ConnectionFactory
     protected function setMappedTypes(
         ConnectionInterface $connection,
         ConnectionMappedTypesOptions $mappedTypesOptions
-    )
-    {
+    ) {
         if ($mappedTypesOptions->getStrict() !== null) {
             $connection->getPlatform()->useStrictMappedType($mappedTypesOptions->getStrict());
         }

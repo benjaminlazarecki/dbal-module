@@ -11,9 +11,9 @@
 
 namespace FridgeDBALModule\Options;
 
-use FridgeDBALModule\Exception\OptionsException,
-    Zend\Stdlib\AbstractOptions as BaseOptions,
-    Zend\Stdlib\Exception\BadMethodCallException;
+use FridgeDBALModule\Exception\OptionsException;
+use Zend\Stdlib\AbstractOptions as BaseOptions;
+use Zend\Stdlib\Exception\BadMethodCallException;
 
 /**
  * Abstract options.

@@ -25,7 +25,7 @@ class OptionsException extends Exception
      *
      * @return \FridgeDBALModule\Exception\OptionsException The "CONNECTION DOES NOT EXIST" exception.
      */
-    static public function connectionDoesNotExist($connection)
+    public static function connectionDoesNotExist($connection)
     {
         return new static(sprintf('The connection "%s" does not exist.', $connection));
     }
@@ -37,7 +37,7 @@ class OptionsException extends Exception
      *
      * @return \FridgeDBALModule\Exception\OptionsException The "OPTION DOES NOT EXIST" exception.
      */
-    static public function optionDoesNotExist($option)
+    public static function optionDoesNotExist($option)
     {
         return new static(sprintf('The option "%s" does not exist.', $option));
     }

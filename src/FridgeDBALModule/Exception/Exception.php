@@ -11,7 +11,7 @@
 
 namespace FridgeDBALModule\Exception;
 
-use \Exception as BaseException;
+use Exception as BaseException;
 
 /**
  * Fridge DBAL module exception.
@@ -20,5 +20,4 @@ use \Exception as BaseException;
  */
 class Exception extends BaseException
 {
-
 }

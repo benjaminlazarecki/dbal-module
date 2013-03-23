@@ -11,9 +11,9 @@
 
 namespace FridgeDBALModule\Tests;
 
-use Fridge\DBAL\Event\Events,
-    Fridge\DBAL\Type\Type,
-    Zend\Mvc\Application;
+use Fridge\DBAL\Event\Events;
+use Fridge\DBAL\Type\Type;
+use Zend\Mvc\Application;
 
 /**
  * Fridge DBAL module test.

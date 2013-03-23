@@ -11,10 +11,10 @@
 
 namespace FridgeDBALModule\Service;
 
-use Fridge\DBAL\Type\Type,
-    FridgeDBALModule\Options\ModuleOptions,
-    Zend\ServiceManager\FactoryInterface,
-    Zend\ServiceManager\ServiceLocatorInterface;
+use Fridge\DBAL\Type\Type;
+use FridgeDBALModule\Options\ModuleOptions;
+use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
  * Connection registry.
