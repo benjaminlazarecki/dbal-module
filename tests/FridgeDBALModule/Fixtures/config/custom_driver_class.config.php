@@ -15,7 +15,7 @@ return array(
         'connections' => array(
             'default' => array(
                 'parameters' => array(
-                    'driver_class' => 'Fridge\DBAL\Driver\PDO\MySQLDriver',
+                    'driver_class' => 'Fridge\DBAL\Driver\PDOMySQLDriver',
                     'username'     => 'username',
                     'password'     => 'password',
                 ),
