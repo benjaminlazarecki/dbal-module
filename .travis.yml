@@ -11,7 +11,7 @@ env:
     - ZEND_FRAMEWORK_VERSION="2.1.*"
 
 before_script:
-    - composer require --no-update zendframework/zendframework:${SYMFONY_VERSION}
+    - composer require --no-update zendframework/zendframework:${ZEND_FRAMEWORK_VERSION}
     - composer install --dev
 
 script: bin/phpunit
