@@ -33,7 +33,7 @@ class ConnectionParametersOptionsTest extends \PHPUnit_Framework_TestCase
     {
         $this->options = array(
             'connection_class' => 'Fridge\DBAL\Connection\Connection',
-            'driver_class'     => 'Fridge\DBAL\Driver\PDO\MySQLDriver',
+            'driver_class'     => 'Fridge\DBAL\Driver\PDOMySQLDriver',
             'driver'           => 'pdo_mysql',
             'username'         => 'username',
             'password'         => 'password',

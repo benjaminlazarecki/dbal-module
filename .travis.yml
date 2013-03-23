@@ -6,9 +6,15 @@ php:
     - 5.4
     - 5.5
 
-before_script: composer install --dev
+env:
+    - ZEND_FRAMEWORK_VERSION="2.0.*"
+    - ZEND_FRAMEWORK_VERSION="2.1.*"
 
-script: phpunit
+before_script:
+    - composer require --no-update zendframework/zendframework:${ZEND_FRAMEWORK_VERSION}
+    - composer install --dev
+
+script: bin/phpunit
 
 notifications:
     email: geloen.eric@gmail.com

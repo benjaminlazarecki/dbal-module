@@ -97,7 +97,7 @@ class ModuleTest extends \PHPUnit_Framework_TestCase
 
         $this->assertSame(array('default' => $connection), $connectionRegistry->getConnections());
 
-        $this->assertInstanceOf('Fridge\DBAL\Driver\PDO\MySQLDriver', $connection->getDriver());
+        $this->assertInstanceOf('Fridge\DBAL\Driver\PDOMySQLDriver', $connection->getDriver());
         $this->assertSame('username', $connection->getUsername());
         $this->assertSame('password', $connection->getPassword());
         $this->assertSame('database', $connection->getDatabase());
@@ -123,11 +123,11 @@ class ModuleTest extends \PHPUnit_Framework_TestCase
         $connection1 = $connectionRegistry->getConnection('database1');
         $connection2 = $connectionRegistry->getConnection('database2');
 
-        $this->assertInstanceOf('Fridge\DBAL\Driver\PDO\MySQLDriver', $connection1->getDriver());
+        $this->assertInstanceOf('Fridge\DBAL\Driver\PDOMySQLDriver', $connection1->getDriver());
         $this->assertSame('username1', $connection1->getUsername());
         $this->assertSame('password1', $connection1->getPassword());
 
-        $this->assertInstanceOf('Fridge\DBAL\Driver\PDO\PostgreSQLDriver', $connection2->getDriver());
+        $this->assertInstanceOf('Fridge\DBAL\Driver\PDOPostgreSQLDriver', $connection2->getDriver());
         $this->assertSame('username2', $connection2->getUsername());
         $this->assertSame('password2', $connection2->getPassword());
     }
@@ -170,7 +170,7 @@ class ModuleTest extends \PHPUnit_Framework_TestCase
             ->get('fridge.dbal')
             ->getDefaultConnection();
 
-        $this->assertInstanceOf('Fridge\DBAL\Driver\PDO\MySQLDriver', $connection->getDriver());
+        $this->assertInstanceOf('Fridge\DBAL\Driver\PDOMySQLDriver', $connection->getDriver());
     }
 
     public function testCustomUnixSocket()
@@ -238,7 +238,7 @@ class ModuleTest extends \PHPUnit_Framework_TestCase
             ->get('fridge.dbal')
             ->getConnection('default');
 
-        $this->assertInstanceOf('Fridge\DBAL\Driver\PDO\MySQLDriver', $connection->getDriver());
+        $this->assertInstanceOf('Fridge\DBAL\Driver\PDOMySQLDriver', $connection->getDriver());
         $this->assertSame('username', $connection->getUsername());
         $this->assertSame('password', $connection->getPassword());
         $this->assertSame('database', $connection->getDatabase());
